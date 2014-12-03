@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Webstudio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/style_video.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('google-map');
+            var mapOptions = {
+              center: new google.maps.LatLng(-26.838503, -65.203612),
+              zoom: 18,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+            var myLatlng = new google.maps.LatLng(-26.838503, -65.203612);
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title:"Insignia"
+            });
+            google.maps.event.trigger(map,'resize');
+            map.setZoom( map.getZoom() );
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="header">
+            <h1>Webstudio</h1>
+            <div class="horizontal-menu">
+                <ul>
+                    <li><a href="#">Sec1</a></li>
+                    <li><a href="#">Sec2</a></li>
+                    <li><a href="#">Sec3</a></li>
+                </ul>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <div class="highlighted">
+            <img src="img/responsive.png" class="highlighted-img">
+            <p class="highlighted-text">
+            Responsive web design (RWD) is an approach to web design aimed at crafting sites to provide an optimal viewing experience—easy reading and navigation with a minimum of resizing, panning, and scrolling—across a wide range of devices (from desktop computer monitors to mobile phones).
+            </p>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="columns">
+            <img src="img/html5.png" class="columns-img-top">
+            <p>
+            HTML5 is a core technology markup language of the Internet used for structuring and presenting content for the World Wide Web. As of October 2014 this is the final and complete[2] fifth revision of the HTML standard of the World Wide Web Consortium (W3C).
+            </p>
+        </div>
+        <div class="columns">
+            <img src="img/css3.png" class="columns-img-top">
+            <p>
+            Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language. While most often used to change the style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any kind of XML document, including plain XML, SVG and XUL. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.
+            </p>
+        </div>
+        <div class="columns">
+            <img src="img/js.png" class="columns-img-top">
+            <p>
+            JavaScript (JS) is a dynamic computer programming language.[5] It is most commonly used as part of web browsers, whose implementations allow client-side scripts to interact with the user, control the browser, communicate asynchronously, and alter the document content that is displayed.[5] It is also used in server-side network programming with frameworks such as Node.js, game development and the creation of desktop and mobile applications.
+            </p>
+        </div>
+        <div class="content">
+            <div class="flex-embed">
+                <a href="https://www.youtube.com/embed/WkLO-q2wC80?autoplay=1&amp;vq=hd720" data-ga-category="Outbound links" data-ga-action="Watch video" data-ga-label="Atlassian, about us">
+                    <img src="http://i.ytimg.com/vi/WkLO-q2wC80/hqdefault.jpg" alt="video thumbnail">
+                    <div class="play-btn"></div>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="google-map"></div>
+            <div>
+                <h3>Our technologies</h3>
+                <ul>
+                    <li>Ruby on Rails</li>
+                    <li>Front-end development: HTML, CSS and Javascript</li>
+                    <li>Kohana (PHP)</li>
+                    <li>Mobile applications development for iOS and Android platforms</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
